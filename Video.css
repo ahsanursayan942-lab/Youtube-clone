@@ -1,0 +1,162 @@
+
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px 16px;
+}
+
+@media (max-width: 750px) {
+  .video-grid {
+    gap: 16px 6px;
+   grid-template-columns: 1fr 1fr ;
+  }
+}
+
+@media (max-width: 751px) and (min-width:9999px){
+    .video-grid {
+    gap: 16px 6px;
+   grid-template-columns: 1fr 1fr ;
+  }
+}
+
+@media(min-width:1000px){
+  .video-grid{
+    gap: 16px 6px;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+.video-preview {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.video-preview:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.video-preview:focus {
+  outline: 2px solid #0f9d58;
+  outline-offset: 2px;
+}
+
+
+
+
+.thumbnail-row {
+  position: relative;
+  margin-bottom: 8px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.thumbnail {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.thumbnail:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+
+.video-time {
+  position: absolute;
+  bottom: 8px;
+  right: 6px;
+  padding: 3px 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  background: rgba(0,0,0,0.85);
+  border-radius: 3px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.video-time:hover {
+  transform: scale(1.05);
+  background: rgba(0,0,0,0.95);
+}
+
+@media (max-width: 320px) {
+  .video-time {
+    font-size: 11px;
+    padding: 2px 4px;
+  }
+}
+
+
+
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 10px;
+  align-items: start;
+}
+
+.profile-picture {
+  width: 36px;
+  border-radius: 50%;
+}
+
+.video-info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.video-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 320px) {
+  .video-title {
+    font-size: 13px;
+  }
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96,96,96);
+  line-height: 16px;
+}
+
+.video-author {
+  margin-bottom: 2px;
+}
+
+.video-stats {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

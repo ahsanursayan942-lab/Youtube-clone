@@ -1,0 +1,91 @@
+
+.sidebar {
+  position: fixed;
+  top: 55px; 
+  left: 0;
+  bottom: 0;
+  width: 72px; 
+  background-color: white;
+  z-index: 200;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; 
+}
+
+
+.sidebar-link {
+  width: 100%;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1px;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  flex-shrink: 0;
+  background-color: white;
+  border-radius: 8px 0 0 8px;
+  flex-direction: column;
+  color:black;
+  
+}
+
+.sidebar-link:hover {
+  background-color: rgb(235,235,235);
+  transform: translateX(2px);
+}
+
+.sidebar-link.active {
+  background-color: white;
+  color: white;
+}
+
+
+.sidebar-link img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+ 
+ .sidebar-link div{
+   font-size:10px;
+ }
+
+.sidebar-link span {
+  margin-left: 5px;
+  font-size: 8px;
+  white-space: nowrap;
+  
+}
+
+
+.sidebar-link:hover span {
+  display: inline;
+}
+
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
