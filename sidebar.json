@@ -1,0 +1,8 @@
+[
+  {"name": "Home", "icon": "home.svg", "link": "#"},
+  {"name": "Explore", "icon": "explore.svg", "link": "#"},
+  {"name": "Subscriptions", "icon": "subscriptions.svg", "link": "#"},
+  {"name": "Originals", "icon": "originals.svg", "link": "#"},
+  {"name": "YouTube Music", "icon": "youtube-music.svg", "link": "#"},
+  {"name": "Library", "icon": "library.svg", "link": "#"}
+]
